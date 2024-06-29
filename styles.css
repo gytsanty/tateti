@@ -1,0 +1,108 @@
+:root{
+    --color-primario: rgb(28, 0, 34);
+    --line-style: 10px solid var(--color-primario);
+    --font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    background-color: #43e22b ;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+h1{
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 3rem;
+    color: var(--color-primario);
+    display: flex;
+    flex-direction: column;
+}
+
+#contenedorGrilla{
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    justify-content: center;
+   
+}
+
+.cuadrado{
+    color: var(--color-primario);
+    height: 120px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 5rem;
+    transition: 50ms ease-in-out;
+}
+
+.arriba{
+    border-bottom: var(--line-style);
+}
+
+.medio{
+    border-left: var(--line-style);
+    border-right: var(--line-style);
+}
+
+.abajo{
+    border-top: var(--line-style);
+}
+
+.ganador{
+    background-color: rgb(79, 122, 79);
+}
+
+dialog{
+    text-align: center;
+    min-width: 50vw;
+    background-color: rgba(240, 248, 255, 0.23);
+    padding: 5rem;
+    border: unset;
+}
+
+dialog::backdrop{
+    backdrop-filter: blur(3px);
+}
+
+dialog h2{
+    color: blue;
+    font-family: var(--font-family);
+    font-size: xx-large;
+}
+
+dialog button{
+    color: rgb(171, 47, 134);
+    font-size: larger;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 400px) {
+    body{
+        background-color: hsl(64, 76%, 53%) ;
+        user-select: none;
+        display: flex;
+        flex-direction: column;
+  }
+    #contenedorGrilla  {
+        width: 100%;
+        height: auto;
+    }
+    .cuadrado{
+        color: red;
+        height: 80px;
+        width: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 3rem;
+        transition: 50ms ease-in-out;
+    }
+    
+}
